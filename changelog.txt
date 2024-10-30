@@ -1,0 +1,21 @@
+== Changelog ==
+
+= 2.1.1 =
+* Added: Proper minifier through grunt
+* Fixed: Javascript error preventing ajax load for checkout
+* Fixed: Date of birth field not allowing manual format dd/mm/yyyy
+* Fixed: styling for phone number clashing with flag on some themes
+
+= 2.0.0 =
+* Added restrictions for Unsubscribed loystar merchants
+* Added Basic Woocommerce Product Sync with loystar Product
+* Fixed the Inventory tracking for recording transactions to loystar
+* Added importation of loystar products to woocommerce option
+* Added inventory tracking update when a product inventory is edited from the loystar app
+* Added inventory tracking for variations of a product
+* Added customer viewing list
+* Added Loyalty widget feature
+* Added intl Telephone Input Javascript plugin for proper phone number validation
+
+= 1.0.0 =
+* lauhcing first version.

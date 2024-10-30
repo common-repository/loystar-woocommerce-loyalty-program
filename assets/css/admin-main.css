@@ -1,0 +1,574 @@
+/*@import url('admin-util.css');*/
+@import url('responsive.css');
+@import url('https://use.fontawesome.com/releases/v5.5.0/css/all.css');
+
+.ls-login-main{
+font-family: 'Lato', sans-serif;
+}
+.ls-login-main a{
+  color:#b04176;
+}
+/*//////////////////////////////////////////////////////////////////*/
+p {
+	font-size: 14px;
+	line-height: 1.7;
+	color: #666666;
+	margin: 0px;
+}
+
+textarea:focus, input:focus {
+  border-color: transparent !important;
+  box-shadow:1px 2px 2px 1px rgba(0,0,0,0.1) !important;
+}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:#666; }
+input:focus::-moz-placeholder { color:#666; }
+input:focus:-ms-input-placeholder { color:#666; }
+
+textarea:focus::-webkit-input-placeholder { color:#666; }
+textarea:focus:-moz-placeholder { color:#666; }
+textarea:focus::-moz-placeholder { color:#666; }
+textarea:focus:-ms-input-placeholder { color:#666; }
+
+input::-webkit-input-placeholder { color: #666;}
+input:-moz-placeholder { color: #666;}
+input::-moz-placeholder { color: #666;}
+input:-ms-input-placeholder { color: #666;}
+
+textarea::-webkit-input-placeholder { color: #666;}
+textarea:-moz-placeholder { color: #666;}
+textarea::-moz-placeholder { color: #666;}
+textarea:-ms-input-placeholder { color: #666;}
+
+label {
+  margin: 0;
+  display: block;
+}
+
+/*---------------------------------------------*/
+button {
+	outline: none !important;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+iframe {
+	border: none !important;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ Utility ]*/
+.txt1 {
+  font-size: 13px;
+  color: #e5e5e5;
+  line-height: 1.5;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ login ]*/
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.container-login100 {  
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 1;  
+}
+
+.container-login100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrap-login100 {
+  width: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 55px 55px 37px 55px;
+  background: #ffffff;
+  background: linear-gradient(top, #ffffff, #f9f9f9);
+  color: #666;
+border: 1px solid rgba(0,0,0,0.1);
+}
+
+
+/*------------------------------------------------------------------
+[ Form ]*/
+
+.login100-form {
+  width: 100%;
+}
+
+.login100-form-logo {
+  font-size: 60px; 
+  color: #333333;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.login100-form-title {
+  font-size: 24px;
+  color: inherit;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+
+  display: block;
+}
+
+
+/*------------------------------------------------------------------
+[ Input ]*/
+
+.wrap-input100 {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid rgba(255,255,255,0.24);
+  margin-bottom: 30px;
+}
+
+.input100 {
+  font-size: 16px;
+  color: #666 !important;
+  line-height: 1.2;
+  display: block;
+  width: 100%;
+  height: 45px !important;
+  background-color: rgba(0, 0, 0, 0.02) !important;
+  padding: 0 5px 0 38px;
+  border: 1px solid rgba(0,0,0,0.2) !important;
+  box-shadow: none !important;
+  margin:22px 0;
+}
+
+/*---------------------------------------------*/ 
+.focus-input100 {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input100::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  background: #fff;
+}
+
+.focus-input100.email::after {
+  content: "\f007";
+}
+.focus-input100.password::after {
+  content: "\f023";
+}
+.focus-input100::after {
+  font-size: 16px;
+  color: #b04176;
+  /*content: attr(data-placeholder);*/
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 13px;
+  left: 2px;
+  padding-left: 5px;
+  text-transform: none !important;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input100:focus {
+  padding-left: 5px !important;
+}
+
+.input100:focus + .focus-input100::after {
+  top: -27px;
+  font-size: 18px;
+}
+
+.input100:focus + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 + .focus-input100::after {
+  top: -27px;
+  font-size: 18px;
+}
+
+.has-val.input100 + .focus-input100::before {
+  width: 100%;
+}
+
+.has-val.input100 {
+  padding-left: 5px;
+}
+
+
+/*==================================================================
+[ Restyle Checkbox ]*/
+
+.contact100-form-checkbox {
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 35px;
+}
+
+.input-checkbox100 {
+  display: none;
+}
+
+.label-checkbox100 {
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.2;
+
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  cursor: pointer;
+}
+
+.label-checkbox100::before {
+  content: "\f26b";
+  font-family: Material-Design-Iconic-Font;
+  font-size: 13px;
+  color: transparent;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+  /*background: #fff;*/
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.input-checkbox100:checked + .label-checkbox100::before {
+  color: #555555;
+}
+
+
+/*------------------------------------------------------------------
+[ Button ]*/
+.container-login100-form-btn {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.login100-form-btn {
+  font-size: 16px;
+  color: #ffffff;
+  line-height: 1.2;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  min-width: 120px;
+  height: 50px;
+  border-radius: 25px;
+ position: relative;
+  z-index: 1;
+border:1px solid rgba(0,0,0,0.1);
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn::before {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: #b04176;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.login100-form-btn:hover {
+  color: rgb(189, 100, 140);
+  background-color:transparent;
+  border-left: 4px solid rgb(189, 100, 140);
+  border-right: 4px solid rgb(189, 100, 140);
+  background: linear-gradient(bottom, rgb(189, 100, 140), rgb(189, 100, 140));
+}
+
+.login100-form-btn:hover:before {
+  opacity: 0;
+}
+
+
+/*------------------------------------------------------------------
+[ Responsive ]*/
+
+@media (max-width: 790px) {
+  .input100{
+    padding-left:45px !important;
+  }
+  .ls-cool-btn .dashicons{
+    margin-top:8px;
+  }
+  .ls-edit-btn{
+    margin-top:10px;
+  }
+}
+@media (max-width: 576px) {
+  .wrap-login100 {
+    padding: 55px 15px 37px 15px;
+  }
+}
+
+/*------------------------------------------------------------------
+[ Alert validate ]*/
+
+.validate-input {
+  position: relative;
+}
+
+
+@media (max-width: 992px) {
+  .alert-validate::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+/*checkbox design*/
+.ls-checkbox-holder{
+  width:100%;
+}
+.ls-checkbox-holder form{
+  width: 500px;
+  background-color: #ffffff;
+  border-left: 5px solid rgb(189, 100, 140);
+  border-radius: 5px 0 0 5px;
+  padding: 15px 10px 10px;
+  box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.2);
+  margin:2px auto 10px auto ;
+}
+.ls-checkbox-holder input::before {
+  border: 2px solid rgba(189, 100, 140,0.1);
+  border-radius: 20%;
+  background-color: #FFF;
+}
+
+.ls-checkbox-holder input[type=checkbox]:checked:before {
+  color:rgb(189, 100, 140);
+  border-color: rgba(189, 100, 140,0.2);
+  visibility: visible !important;
+  width: 22px;
+  height: 22px;
+}
+/*
+.ls-checkbox-holder input[type=checkbox]:checked:after {
+ 
+  content: "\f00c";
+  position: absolute;
+  color: #fff;
+  font-family: fontawesome;
+  left: 4px;
+  font-size: 1em;
+  top: 9px;
+  
+}*/
+.ls-checkbox-holder button,.ls-cool-btn{
+  float:right;
+  padding:7px 5px;
+  background-color:rgb(189, 100, 140);
+  border:1px solid rgba(0,0,0,0.15);
+  color:#ffffff;
+  border-radius:4px;
+  margin-top:-5px;
+  text-shadow:0px 1px 0px rgba(0,0,0,0.2);
+}
+.ls-cool-btn{
+  float:none;
+  text-decoration: none;
+  margin:5px 2px;
+}
+.ls-cool-btn[disabled]{
+  background-color: rgba(189, 100, 140,0.5) !important;
+}
+.ls-cool-btn[disabled],.ls-edit-btn[disabled],.ls[disabled]{
+  cursor: not-allowed !important;
+  opacity:0.7;
+}
+.ls-cool-btn:link,.ls-cool-btn:hover,.ls-cool-btn:active,.ls-cool-btn:visited{
+  color:#ffffff !important;
+}
+.toplevel_page_loystar-woocommerce img{
+  width:25px;
+  margin-top:-4px;
+}
+.loystar-notice{
+  margin:30px 5px 5px 5px;
+}
+
+/*sync part*/
+.sync-details .inner-row{
+  border-bottom:1px solid rgba(0,0,0,0.1);
+  padding:10px;
+  font-size:15px;
+  margin-left:5px;
+  margin-right:5px;
+}
+.sync-details .inner-row:last{
+  border-bottom:none;
+}
+.sync-details .key{
+  font-weight:600;
+  padding:5px 0;
+}
+.sync-details .value{
+  text-align: right;
+  font-weight: 500;
+  padding:5px 0;
+}
+.sync-details button{
+  float:none;
+  margin:5px;
+}
+.sync-details button[disabled]{
+  opacity: 0.7;
+  cursor:not-allowed;
+}
+.sync-details button .text{
+  position: relative;
+  top: 2px;
+  font-size: 13.4px;
+}
+.ls-note .dashicons{
+  font-weight:500;
+}
+.ls-note .dashicons-yes{
+  color: #b04176;
+}
+/*dashicon spin*/
+.dashicons.spin {
+  animation: dashicons-spin 1s infinite;
+  animation-timing-function: linear;
+}
+.shortcode-readonly{
+  width:200px;
+  height:30px;
+  text-align:center;
+  font-weight:600 !important;
+  font-size: 14px;
+}
+.shortcode-readonly:focus{
+  box-shadow:none !important;
+  border: 1px solid #ddd !important;
+}
+
+@keyframes dashicons-spin {
+  0% {
+     transform: rotate( 0deg );
+  }
+  100% {
+     transform: rotate( 360deg );
+  }
+}
+
+@media (max-width:768px){
+  .ls-checkbox-holder form{
+    width:100% !important;
+  }
+  .ls-checkbox-holder strong{
+    margin-left:2px !important;
+  }
+  .ls-checkbox-holder button{
+    float:none;
+    margin:15px 2px 1px 1px;
+  }
+  
+.ls-checkbox-holder input[type=checkbox]:checked:before {
+  width: 27px;
+  height: 27px;
+  font-size:25px;
+}
+.sync-details .value{
+  text-align: left;
+}
+}
